@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/include_toolbar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigation_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:layout_marginTop="@dimen/activity_margin">
+
+                <TextView
+                    android:id="@+id/tv_user_name_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/user_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_margin_double"
+                    android:layout_toRightOf="@+id/tv_user_name_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"
+                    tools:text="Name" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:layout_marginTop="@dimen/activity_margin">
+
+                <TextView
+                    android:id="@+id/tv_user_email_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/user_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_margin_double"
+                    android:layout_toRightOf="@+id/tv_user_email_title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16"
+                    tools:text="Email" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_margin_double"
+                android:text="@string/user_balance"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_30" />
+
+            <TextView
+                android:id="@+id/tv_user_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_30"
+                tools:text="30" />
+
+
+            <Button
+                android:id="@+id/btn_transfer"
+                style="@style/CustomRoundedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_double"
+                android:text="@string/user_transfer" />
+
+            <Button
+                android:id="@+id/btn_transfer_history"
+                style="@style/CustomRoundedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_double"
+                android:text="@string/user_transfer_history" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.j7arsen.pw.utils.view.progress.ProgressView
+        android:id="@+id/pv_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigation_bar"
+        android:visibility="gone"></com.j7arsen.pw.utils.view.progress.ProgressView>
+
+
+</RelativeLayout>

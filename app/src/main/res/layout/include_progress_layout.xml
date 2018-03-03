@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ProgressBar
+        android:id="@+id/pb_load"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_progress_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_error_icon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_progress_error_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_double"
+            android:layout_marginLeft="@dimen/activity_margin_double_and_a_half"
+            android:layout_marginRight="@dimen/activity_margin_double_and_a_half"
+            android:gravity="center"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:text="@string/error"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_progress_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin_double_and_a_half"
+            android:layout_marginRight="@dimen/activity_margin_double_and_a_half"
+            android:layout_marginTop="@dimen/activity_margin_half_half"
+            android:gravity="center"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/black"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley " />
+
+        <Button
+            android:id="@+id/btn_progress_error_retry"
+            style="@style/CustomRoundedButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:textColor="@color/white"
+            android:text="@string/retry" />
+
+
+    </LinearLayout>
+</RelativeLayout>

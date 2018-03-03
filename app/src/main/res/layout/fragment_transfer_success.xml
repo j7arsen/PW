@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigation_bar"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_margin_double_and_a_half"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_user_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_margin_double"
+            android:layout_marginRight="@dimen/activity_margin_double"
+            android:layout_marginTop="@dimen/activity_margin_double_and_a_half"
+            android:gravity="center"
+            android:text="@string/transfer_operation_success"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20" />
+
+        <Button
+            android:id="@+id/btn_success"
+            style="@style/CustomRoundedButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_margin_double_and_fourth"
+            android:text="@string/ok" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

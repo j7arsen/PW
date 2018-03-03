@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_background"
+    android:layout_marginTop="@dimen/activity_margin_half"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tv_transaction_corespondent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_toLeftOf="@+id/tv_transaction_amount"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        tools:text = "Name" />
+
+    <TextView
+        android:id="@+id/tv_transaction_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_transaction_corespondent"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_toLeftOf="@+id/tv_transaction_amount"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_16"
+        tools:text = "20.20.2018" />
+
+    <TextView
+        android:id="@+id/tv_transaction_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/text_size_20"
+        tools:text = "50"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_transaction_date"
+        android:layout_marginLeft="@dimen/activity_margin"
+        android:layout_marginRight="@dimen/activity_margin"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_transaction_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:text="@string/transaction_detail_balance" />
+
+        <TextView
+            android:id="@+id/tv_transaction_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin_half"
+            android:layout_toLeftOf="@+id/tv_transaction_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            tools:text="20" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

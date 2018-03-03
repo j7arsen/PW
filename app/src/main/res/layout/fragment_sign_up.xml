@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigation_bar"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="@dimen/activity_margin_double"
+                android:layout_marginStart="@dimen/activity_margin_double"
+                android:layout_marginTop="@dimen/activity_margin_double"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_name"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_double_half"
+                android:layout_marginRight="@dimen/activity_margin_double_half"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:textColorHint="@color/grey">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_name"
+                    style="@style/EdittextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/sign_up_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:nextFocusForward ="@+id/et_email" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_email"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_double_half"
+                android:layout_marginRight="@dimen/activity_margin_double_half"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:textColorHint="@color/grey">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_email"
+                    style="@style/EdittextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$`*+-/=?^_`{|}~.,"
+                    android:hint="@string/sign_up_email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusForward ="@+id/et_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_password"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_double_half"
+                android:layout_marginRight="@dimen/activity_margin_double_half"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:textColorHint="@color/grey">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_password"
+                    style="@style/EdittextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$`*+-/=?^_`{|}~.,"
+                    android:hint="@string/sign_up_password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textWebPassword"
+                    android:nextFocusForward ="@+id/et_confirm_password" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_confirm_password"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin_double_half"
+                android:layout_marginRight="@dimen/activity_margin_double_half"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:textColorHint="@color/grey">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_confirm_password"
+                    style="@style/EdittextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$`*+-/=?^_`{|}~.,"
+                    android:hint="@string/sign_up_confirm_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textWebPassword" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <com.j7arsen.pw.utils.view.EnableButton
+                android:id="@+id/btn_sign_up"
+                style="@style/CustomRoundedButton"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_margin_double_half"
+                android:layout_marginTop="@dimen/activity_margin_double_and_a_half"
+                android:text="@string/sign_up_operation"
+                app:disableDrawable="@drawable/shape_rounded_disabled_button"
+                app:enable="false"
+                app:enableDrawable="@drawable/selector_button" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">PWProject</string>
+
+    <string name="message_error_connect">No internet connection</string>
+    <string name="message_error_default">Server is not available</string>
+    <string name="message_error_socket">The internet is too slow. Try another one.</string>
+
+    <string name="ok">Ok</string>
+    <string name="retry">Retry</string>
+    <string name="error">Error</string>
+    <string name="label_no_data">No Data</string>
+    <string name="clear_text">CLear text</string>
+
+    <string name="sign_in_screen_title">Sign in</string>
+    <string name="sign_up_screen_title">Sign up</string>
+    <string name="sign_out">Sign Out</string>
+
+    <string name="sign_in_email">E-mail</string>
+    <string name="sign_in_password">Password</string>
+    <string name="sign_in_operation">Sign In</string>
+
+    <string name="sign_up_email">E-mail</string>
+    <string name="sign_up_name">Name</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_confirm_password">Confirmation password</string>
+    <string name="sign_up_operation">Sign Up</string>
+
+    <string name="email_invalid">E-mail invalid format</string>
+    <string name="password_invalid">Password is at least 6 characters long</string>
+    <string name="password_confirm_invalid">Entered passwords do not match</string>
+
+    <string name="main_screen_title">Main</string>
+
+    <string name="user_name">Name:</string>
+    <string name="user_email">E-mail:</string>
+    <string name="user_balance">Your balance:</string>
+    <string name="user_transfer">Transfer</string>
+    <string name="user_transfer_history">Transfer History</string>
+
+    <string name="transfer_screen_title">Transfer</string>
+    <string name="transfer_operation_success_screen_title">Success</string>
+    <string name="transfer_user_search">Search user</string>
+    <string name="transfer_operation_success">Transfer was successful</string>
+    <string name="transfer_amount_title">Enter amount</string>
+    <string name="transfer_amount">Amount</string>
+    <string name="transfer_limit">Insufficient funds on the balance</string>
+    <string name="transfer_zero">You can not transfer 0 funds</string>
+
+    <string name="transaction_screen_title">Transaction</string>
+    <string name="transaction_detail_screen_title">Transaction Detail</string>
+    <string name="transaction_detail_name_title">Corespondent name:</string>
+    <string name="transaction_detail_date">Transaction date:</string>
+    <string name="transaction_detail_transfer_amount">Transfer amount:</string>
+    <string name="transaction_detail_transfer">Transfer</string>
+    <string name="transaction_detail_balance">Balance:</string>
+
+
+</resources>

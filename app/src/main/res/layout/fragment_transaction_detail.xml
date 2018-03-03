@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include
+        android:id="@+id/navigation_bar"
+        layout="@layout/include_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/navigation_bar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/tv_transaction_corespondent_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:text="@string/transaction_detail_name_title" />
+
+            <TextView
+                android:id="@+id/tv_transaction_correspondetn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_toRightOf="@+id/tv_transaction_corespondent_title"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                tools:text = "Name" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/tv_transaction_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:text="@string/transaction_detail_date" />
+
+            <TextView
+                android:id="@+id/tv_transaction_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_toRightOf="@+id/tv_transaction_date_title"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                tools:text = "22.01.2018" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/tv_transaction_amount_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:text="@string/transaction_detail_transfer_amount" />
+
+            <TextView
+                android:id="@+id/tv_transaction_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_toRightOf="@+id/tv_transaction_amount_title"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                tools:text = "50" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginRight="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/tv_transaction_balance_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:text="@string/transaction_detail_balance" />
+
+            <TextView
+                android:id="@+id/tv_transaction_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_toRightOf="@+id/tv_transaction_balance_title"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                tools:text = "50" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_transfer"
+            style="@style/CustomRoundedButton"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_margin_double_and_fourth"
+            android:text="@string/transaction_detail_transfer" />
+
+    </LinearLayout>
+
+</RelativeLayout>

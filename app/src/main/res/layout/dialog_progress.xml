@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_dialog_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:visibility="visible"
+    tools:ignore="MissingPrefix">
+
+    <ProgressBar
+        android:id="@+id/pb_dialog_load"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_dialog_progress_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:background="@drawable/shape_error_bg">
+
+            <ImageView
+                android:id="@+id/iv_error_logo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_dialog_progress_error_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin_double_half_fourth"
+            android:layout_marginRight="@dimen/activity_margin_double_half_fourth"
+            android:layout_marginTop="@dimen/activity_margin_double_half_fourth"
+            android:textSize="@dimen/text_size_16"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="@string/error"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_progress_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin_double_half_fourth"
+            android:layout_marginRight="@dimen/activity_margin_double_half_fourth"
+            android:layout_marginTop="@dimen/activity_margin_double_half_fourth"
+            android:textColor="@color/black"
+            android:maxLines="10"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_size_14"
+            android:gravity="center"
+            tools:text="Test"/>
+
+        <Button
+            android:id="@+id/btn_progress_error_ok"
+            style="@style/CustomRoundedButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/activity_margin_double"
+            android:layout_marginLeft="@dimen/activity_margin_double"
+            android:layout_marginBottom="@dimen/activity_margin_double_half"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_margin_double"
+            android:textColor="@color/white"
+            android:text="@string/ok" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    versionCode = 1
+    minSdkVersion = 21
+    targetSdkVersion = 27
+    compileSdkVersion = 27
+
+    versionName = "1.0"
+
+
+    support = "27.0.2"
+    moxy = "1.5.3"
+    moxyCompiler = "1.5.3"
+    moxyAppCompat = "1.5.3"
+    constraint = "1.0.2"
+    cicerone = "3.0.0"
+    butterknife = "8.8.1"
+    dagger2 = "2.11"
+    rxJava = "2.1.7"
+    rxAndroid = "2.0.1"
+    retrofit = "2.3.0"
+    retrofitRxAdapter = "1.0.0"
+    okhttp = "3.9.1"
+    junit = "4.12"
+    mockito = "2.10.0"
+    testRunner = "1.0.1"
+    espresso = "3.0.1"
+    eventBus = "3.1.1"
+}

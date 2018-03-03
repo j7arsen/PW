@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="EnableButton">
+        <attr name="disableDrawable" format="integer" />
+        <attr name="enableDrawable" format="integer" />
+        <attr name="enable" format="boolean"/>
+    </declare-styleable>
+
+</resources>
